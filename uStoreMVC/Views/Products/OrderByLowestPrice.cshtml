@@ -1,0 +1,120 @@
+﻿@model IEnumerable<uStore.DATA.EF.Product>
+
+@{
+    ViewBag.Title = "Sort by:";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/product.css">
+<link rel="stylesheet" type="text/css" href="~/Content/product_responsive.css">
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+    <br />
+    <br />
+
+    <div class="button cart_button">
+        @Html.ActionLink("Lowest Price", "OrderByLowestPrice", "Products")
+    </div>
+    <div class="button cart_button">
+        @Html.ActionLink("Highest Price", "OrderByHighestPrice", "Products")
+    </div>
+    <br />
+    <br />
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="button cart_button">
+            @Html.ActionLink("Create New", "Create")
+        </div>
+            <br />
+            <br />
+    }
+
+
+    <!-- #region name -->
+    <!--
+
+            <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductStatus.StatusName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.ProductImage)*@
+                    <img src="~/Content/Images/t_@item.ProductImage" alt="@item.ProductName" title="@item.ProductName" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductStatus.StatusName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    -->
+    <!-- #endregion -->
+    <div class="product_grid">
+
+        @foreach (var item in Model)
+        {
+            <div class="product">
+                <div class="product_image">
+                    <img src="~/Content/Images/t_@item.ProductImage" alt="@item.ProductName" title="@item.ProductName" />
+                </div>
+                <div class="product_content">
+                    <div class="product_title">@Html.ActionLink("" + item.ProductName + "", "Details", new { id = item.ProductID })</div>
+                    <div class="product_price">$@Html.DisplayFor(modelItem => item.Price)</div>
+
+                </div>
+                @if (User.IsInRole("Admin"))
+                {
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductID }, new { @class = "btn btn-danger" })
+                    </p>
+                }
+
+
+            </div>
+
+        }
+
+    </div>
+
+</div>

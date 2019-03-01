@@ -1,0 +1,459 @@
+﻿@import url('reset.css');
+@import 'https://fonts.googleapis.com/css?family=Suez+One';
+
+body {
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*************************
+*******   Header    ******
+**************************/
+
+.header_top {
+    background: #172431;
+}
+
+.contactinfo ul li a {
+    font-size: 12px;
+    color: #ccc;
+}
+
+    .contactinfo ul li a:hover {
+        background: inherit;
+    }
+
+.social-icons ul li a {
+    color: #ccc;
+    padding: 0;
+}
+
+.social-icons ul li {
+    display: inline-block;
+}
+
+    .social-icons ul li a i {
+        padding: 11px 15px;
+    }
+
+        .social-icons ul li a i:hover {
+            color: #172431;
+            background: #ccc;
+        }
+
+.header-middle .container .row {
+    margin-left: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.header-bottom {
+    padding: 0;
+    background-color: #172431;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 23px;
+    color: #172431;
+    font-family: 'Suez One', serif;
+}
+
+    .logo span {
+        color: orange;
+    }
+
+.shop-menu ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+    .shop-menu ul li a {
+        font-size: 14px;
+        color: #172431;
+        padding: 5px;
+    }
+
+        .shop-menu ul li a:hover {
+            color: #ccc;
+            background: #172431;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+.navbar-collapse.collapse {
+    padding-left: 0;
+}
+
+.mainmenu ul li a {
+    color: #696763;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+    .mainmenu ul li a:hover {
+        background: none;
+        color: #fdb45e;
+    }
+
+.mainmenu > ul > li > a {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.mainmenu ul li {
+    padding: 0;
+}
+
+/*needed for responsive nav*/
+.icon-bar {
+    background: #ccc;
+}
+
+.mainmenu ul li {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+    .mainmenu ul li:first-child {
+        padding-left: 0px;
+    }
+
+/*************************
+*******   Footer    ******
+**************************/
+
+#footer {
+    background: #172431;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    color: #ccc;
+}
+
+/*************************
+*******    Home     ******
+**************************/
+
+/* BEGIN Image Carousel */
+#slider {
+    padding-bottom: 45px;
+}
+
+.carousel-indicators li {
+    background: #C4C4BE;
+}
+
+    .carousel-indicators li.active {
+        background: #3A5C83;
+    }
+
+.item {
+    padding-left: 100px;
+}
+
+.book {
+    margin-left: 0;
+}
+
+.item h1 {
+    color: #3A5C83;
+    font-size: 48px;
+    margin-top: 115px;
+}
+
+.item h2 {
+    color: #363432;
+    font-size: 28px;
+    margin-bottom: 22px;
+    margin-top: 10px;
+}
+
+.item p {
+    color: #363432;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.get {
+    background: #3A5C83;
+    border: 0 none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 23px;
+}
+
+.control-carousel {
+    position: absolute;
+    top: 50%;
+    font-size: 60px;
+    color: #C2C2C1;
+}
+
+    .control-carousel:hover {
+        color: #3A5C83;
+    }
+
+.right {
+    right: 0;
+}
+/* END Image Carousel */
+
+/* BEGIN Featured Books */
+.featured_books {
+    overflow: hidden;
+}
+
+h2.title {
+    color: #3A5C83;
+    font-size: 18px;
+    margin: 0 15px 30px 0;
+    text-transform: uppercase;
+}
+
+.product-image-wrapper {
+    border: 1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.single-products {
+    position: relative;
+}
+
+.productinfo p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #696763;
+    margin-top: 5px;
+}
+
+.productinfo img {
+    width: 100%;
+}
+
+.productinfo {
+    position: relative;
+}
+/* END Featured Books */
+
+
+/*************************
+******* Contact CSS ********
+**************************/
+
+/* BEGIN Contact Map */
+.google-maps {
+    position: relative;
+    overflow: hidden;
+}
+
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+.contact-map {
+    width: 100%;
+    height: 385px;
+    margin-bottom: 70px;
+}
+/* END Contact Map */
+
+/* BEGIN Form Controls */
+.contact-form .heading {
+    text-transform: capitalize;
+}
+
+#contact-page .form-control {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #696763;
+    height: 46px;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#contact-page #message {
+    height: 160px;
+    resize: none;
+}
+
+#contact-page .form-control:focus,
+#contact-page .form-control:hover {
+    border-color: #FDB45E;
+}
+/* END Form Controls */
+
+/* BEGIN ContactInfo & Social Networking */
+#contact-page .contact-info {
+    padding: 0 20px;
+    margin: -5px auto 40px;
+}
+
+    #contact-page .contact-info address {
+        margin-bottom: 40px;
+        margin-top: -5px;
+    }
+
+    #contact-page .contact-info p {
+        color: #696763;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+.social-networks {
+    text-align: center;
+}
+
+    .social-networks ul {
+        margin-top: -5px;
+        padding: 0;
+        display: inline-block;
+    }
+
+        .social-networks ul li {
+            float: left;
+            margin-right: 20px;
+        }
+
+            /* improves centering in small responsive layout */
+            .social-networks ul li:last-child {
+                margin-right: 0;
+            }
+
+            .social-networks ul li a {
+                color: #999;
+                font-size: 25px;
+            }
+
+.contact-info .social-networks ul li a:hover {
+    color: #3A5C83;
+}
+
+.invalid {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    color: red;
+    font-weight: bold;
+}
+
+/*Admin side Nav*/
+
+.sidenav {
+    height: 100%; /*100% full height*/
+    width: 0; /*widht 0, will change with javascript*/
+    position: fixed; /*Stay in place on the page*/
+    z-index: 11111; /*Stay On Top of everything else*/
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.9); /*Black, transparent*/
+    overflow-x: hidden; /*disabling the horizontal scroll*/
+    padding-top: 300px; /*place content 60 pixels from top*/
+    transition: 0.5s; /*.5 second transition effect to slide the sidenav*/
+    float:left;
+}
+
+    /*Navigatin menu links*/
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover, .offcanvas a:focus {
+            color: #f1f1f1;
+        }
+
+/*Position and style close button (top right corner)*/
+
+.closebtn {
+    padding-top: 200px;
+    /*position: absolute;*/
+    top: 0;
+    right: 50px;
+    font-size: 36px !important;
+    margin-left: 175px;
+}
+
+/*Style page content - use this if you want to push the page content to the right when sidenav is open*/
+
+main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/*On smaller screens with a height less than 450px, change the style of the sidenav to have less padding and a smaller font size*/
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.button {
+    font-family: sans-serif;
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    width: 20px;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    /*
+        writing-mode is an experimental css property that allows us to change how text is positioned on the page
+        https://css-tricks.com/almanac/properties/w/writing-mode/
+    */
+    writing-mode: vertical-lr;
+    color: white;
+    font-weight: bold;
+}
+
+section{ 
+    margin-bottom: 20px;
+}
+
+#accordion{
+    padding-left: 200px;
+
+}
+
+
+#accordion ul li{
+    list-style-type: disc;
+    margin-left: 120px;
+
+}
+
+.title span {
+    font-size: 2em;
+}

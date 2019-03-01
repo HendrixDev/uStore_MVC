@@ -1,0 +1,55 @@
+﻿@model IEnumerable<uStore.DATA.EF.CartItem>
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<div class="container">
+    @if (Model.Count() < 1)
+{
+    <h2>You have no items in your cart!</h2>
+}
+
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Date added
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @*<img src="~/Content/Images/t_@item.Product.ProductImage" alt="@item.Product.ProductName" title="@item.Product.ProductName" />*@
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateAdded)
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete","Cart", new { id = item.CartItemID})">Remove from Cart</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    @*<p>Total: @Model.</p>*@
+}
+</div>

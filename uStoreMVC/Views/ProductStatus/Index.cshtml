@@ -1,0 +1,39 @@
+﻿@model IEnumerable<uStore.DATA.EF.ProductStatus>
+
+@{
+    ViewBag.Title = "Product Status";
+}
+
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+    <br />
+    <br />
+
+    <p class="btn btn-primary">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductStatusID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductStatusID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductStatusID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
